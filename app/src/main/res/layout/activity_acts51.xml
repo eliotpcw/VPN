@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".acts.Acts51Activity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/acts_51_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/acts_51_tshpi"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias=".04">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/acts_51_shpi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:editable="false"
+                    android:hint="Введите ШПИ"
+                    android:singleLine="true"
+                    android:cursorVisible="false"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/acts_51_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:text="Причины составления нарушения"
+                app:layout_constraintTop_toBottomOf="@id/acts_51_tshpi"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <Spinner
+                android:id="@+id/acts_51_spinner1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:spinnerMode="dialog"
+                android:textSize="13sp"
+                android:entries="@array/labels_51_reasons"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/acts_51_title1"/>
+
+            <TextView
+                android:id="@+id/acts_51_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Состояние оболочки"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/acts_51_spinner1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <Spinner
+                android:id="@+id/acts_51_spinner2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:spinnerMode="dialog"
+                android:textSize="13sp"
+                android:entries="@array/labels_violations"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/acts_51_title2"/>
+
+            <Spinner
+                android:id="@+id/fromDepSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:entries="@array/from_department"
+                android:spinnerMode="dialog"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/acts_51_spinner2" />
+
+            <Spinner
+                android:id="@+id/toDepSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                app:layout_constraintTop_toBottomOf="@+id/acts_51_spinner2"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"
+                android:entries="@array/to_department"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/acts_51_tcomment"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fromDepSpinner">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/acts_51_comment"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Коментарии"
+                    android:minLines="1"
+                    android:maxLines="5"
+                    android:maxLength="150"
+                    android:inputType="textNoSuggestions|textMultiLine"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/acts_51_create"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Создать акт"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

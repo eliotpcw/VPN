@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AcceptScanActivity">
+
+    <Button
+        android:id="@+id/ascan_act"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Создать акт"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/ascan_end"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Завершить скан"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ascan_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ascan_inn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Просканировано: 0"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ascan_added"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Осталось: 0"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ascan_textInputLayout"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ascan_added"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ascan_textInputEditText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Введите код"
+                    android:singleLine="true"
+                    android:inputType="textCapCharacters"
+                    android:cursorVisible="false"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ascan_center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ascan_act"
+        app:layout_constraintBottom_toTopOf="@id/ascan_bottom" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ascan_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

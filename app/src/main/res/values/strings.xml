@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">ВПН</string>
+
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="enter">Войти</string>
+    <string name="clearCache">Очистить память</string>
+
+
+    <!-- O FORM GENERAL -->
+    <string name="acceptOFormTitle">О-накладная (приём)</string>
+    <string name="transferOFormTitle">О-накладная (передача)</string>
+    <string name="arrival">Подтвердить прибытие</string>
+    <string name="date">Дата</string>
+    <string name="time">Время</string>
+    <string name="ems">EMS</string>
+    <string name="insurance">Страховые</string>
+    <string name="total">Всего</string>
+    <string name="plan">План (ПУС)</string>
+    <string name="fact">Факт</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="save">Сохранить</string>
+    <string name="update">Редактировать</string>
+    <string name="acceptForm">Принять</string>
+    <string name="showContents">Посмотреть содержимое</string>
+    <string name="transferForm">Передать</string>
+    <string name="confirmArrivalError">Подтвердите время прибытия</string>
+    <string name="cannotUpdatePageError">Вы не можете редактировать данную страницу на этой станции.</string>
+    <string name="lastStationError">Это последняя станция маршрута. Вы не можете производить приём.</string>
+    <string name="firstStationError">Это первая станция маршрута. Вы не можете производить передачу.</string>
+    <string name="title_activity_station">StationActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="departed">Поезд находится в пути, пожалуйста, обновите страницу позже</string>
+    <string name="archived">Текущий маршрут окончен</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_dghdgh">dghdgh</string>
+
+    <string-array name="labels_51_reasons">
+        <item>Неполучение приписанных вещей</item>
+        <item>Замена почтовых отправлений</item>
+        <item>Порча вложения</item>
+        <item>Порча оболочки, упаковки, с доступом вложения</item>
+        <item>Нарушение пломб/ЗПУ</item>
+        <item>Отсутствие привязки почтовых отправлений к транспортной накладной (без приписки)</item>
+        <item>Отсутствие ШПИ на почтовом отправлении</item>
+    </string-array>
+
+    <string-array name="labels_30_reasons">
+        <item>Засыл и нарушение планов направления почтовых отправлений</item>
+        <item>Поступление почтовых отправлений без указания особых отметок («Осторожно», «До двери»)</item>
+    </string-array>
+
+    <string-array name="labels_violations">
+        <item>Целое</item>
+        <item>Не поврежденная</item>
+        <item>Поврежденное</item>
+        <item>Имеет доступ к вложению</item>
+        <item>Не имеет доступ к вложению</item>
+        <item>Подмоченное</item>
+        <item>Разрыв/разрез</item>
+    </string-array>
+
+
+    <string-array name="mails_reasons">
+        <item>Засыл и нарушение планов направления почтовых отправлений</item>
+        <item>Замедление контрольных сроков пересылки</item>
+        <item>Поступление почтовых отправлений без указания особых отметок («Осторожно», «До двери»)</item>
+        <item>Поступление неправильно оформленного бланка перевода наложенного платежа</item>
+        <item>Неправильный перевод суммы объявленной ценности международных почтовых отправлений в СПЗ</item>
+        <item>Недостаточное/отсутствие количество сопроводительных документов, бланков (CN 23, CP71)</item>
+    </string-array>
+
+    <string name="request_not_successful">Запрос не успешен: %s</string>
+    <string name="request_json_error">Ошибка обработки запроса</string>
+    <string name="request_connection_error">Проверьте подключение к интернету</string>
+    <string name="request_timeout">Сервер не отвечает</string>
+    <string name="request_http_error">Ошибка запроса: %d</string>
+    <string name="request_http_error_format">Ошибка запроса: %d</string>
+    <string name="request_http_error_404">Транспорт не найден</string>
+    <string name="request_http_error_500">Внутренняя ошибка сервера</string>
+    <string name="request_error">Ошибка: %s \n %s</string>
+    <string name="request_http_error_user_blocked">Пользователь заблокирован</string>
+    <string name="request_error_empty">Пустой ответ</string>
+    <string name="request_http_error_400">Не найдено</string>
+
+    <string name="alert_dialog_message">Подождите! Идет загрузка…</string>
+
+    <string name="current_version">Текущая версия %s</string>
+    <string name="mass_transfer">Сличение группы</string>
+
+    <string-array name="from_department">
+        <item>Откуда</item>
+    </string-array>
+
+    <string-array name="to_department">
+        <item>Куда</item>
+    </string-array>
+
+</resources>
